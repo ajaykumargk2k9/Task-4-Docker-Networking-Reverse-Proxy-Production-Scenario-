@@ -32,3 +32,10 @@ Even though these services are independent they communicate with each other when
 🏗️ Project Architecture – Employee Management System
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Project%20Architecture%20%E2%80%93%20Employee%20Management%20System.PNG?raw=true)
+
+---
+
+We use Nginx which acts as a high-performance reverse proxy and web server. It routes requests to backend services and is widely used in production.
+Docker Networking allows containers to communicate securely using service names instead of IP addresses.
+
+
