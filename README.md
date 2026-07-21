@@ -31,26 +31,4 @@ Even though these services are independent they communicate with each other when
 
 🏗️ Project Architecture – Employee Management System
 
-
-                          🌐 Client / Browser
-                                  │
-                                  │ HTTP Request
-                                  ▼
-                     🌍 Nginx Reverse Proxy (Port 80)
-                                  │
-        ┌───────────────┬──────────┼──────────┬───────────────┐
-        │               │          │          │               │
-        ▼               ▼          ▼          ▼
- 👨‍💼 Employee      🏢 Department   💰 Payroll   📅 Attendance
-    Service            Service       Service        Service
- (Node.js/Flask)    (Node.js/Flask) (Node.js/Flask) (Node.js/Flask)
-        │               │          │          │
-        └───────────────┴──────────┴──────────┘
-                        │
-            🐳 Docker Internal Network
-                        │
-                        ▼
-                 🗄️ MySQL Database
-                        │
-                 💾 Docker Volume
-             (Persistent Database Data)
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Project%20Architecture%20%E2%80%93%20Employee%20Management%20System.PNG?raw=true)
