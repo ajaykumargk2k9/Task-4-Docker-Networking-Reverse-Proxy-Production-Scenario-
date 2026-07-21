@@ -26,3 +26,31 @@ Each service works independently and has:
 🚀 Its own deployment
 
 Even though these services are independent they communicate with each other whenever required to provide a complete Employee Management System.
+
+---
+
+🏗️ Project Architecture – Employee Management System
+
+
+                          🌐 Client / Browser
+                                  │
+                                  │ HTTP Request
+                                  ▼
+                     🌍 Nginx Reverse Proxy (Port 80)
+                                  │
+        ┌───────────────┬──────────┼──────────┬───────────────┐
+        │               │          │          │               │
+        ▼               ▼          ▼          ▼
+ 👨‍💼 Employee      🏢 Department   💰 Payroll   📅 Attendance
+    Service            Service       Service        Service
+ (Node.js/Flask)    (Node.js/Flask) (Node.js/Flask) (Node.js/Flask)
+        │               │          │          │
+        └───────────────┴──────────┴──────────┘
+                        │
+            🐳 Docker Internal Network
+                        │
+                        ▼
+                 🗄️ MySQL Database
+                        │
+                 💾 Docker Volume
+             (Persistent Database Data)
