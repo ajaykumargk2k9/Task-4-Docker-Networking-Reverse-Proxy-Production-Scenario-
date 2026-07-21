@@ -14,15 +14,21 @@ In this project we use a Microservices Architecture. This architecture is used b
 For example in an Employee Management System we can have the following four microservices:
 
 👨‍💼 Employee Service – Manages employee details.
+
 🏢 Department Service – Manages department information.
+
 💰 Payroll Service – Handles employee salary and payroll.
+
 📅 Attendance Service – Tracks employee attendance.
 
 Each service works independently and has:
 
 📁 Its own source code
+
 🐳 Its own Dockerfile
+
 📦 Its own Docker container
+
 🚀 Its own deployment
 
 Even though these services are independent they communicate with each other whenever required to provide a complete Employee Management System.
