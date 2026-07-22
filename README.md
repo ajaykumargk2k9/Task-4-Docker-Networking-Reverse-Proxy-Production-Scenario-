@@ -516,3 +516,95 @@ http://localhost:3003/payroll
 http://localhost:3004/attendance
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20running.PNG?raw=true)
+
+---
+
+# Configure Nginx Reverse Proxy
+
+Instead of accessing services like this:
+
+http://localhost:3001/employees
+
+http://localhost:3002/departments
+
+http://localhost:3003/payroll
+
+http://localhost:3004/attendance
+
+We'll access them using only one port (80):
+
+http://localhost/employees
+
+http://localhost/departments
+
+http://localhost/payroll
+
+http://localhost/attendance
+
+Nginx will receive the request and forward it to the correct microservice.
+
+---
+
+# Step 1 – Create nginx.conf
+
+Inside the nginx folder, create a file: nginx.conf
+
+Paste the following
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/nginx.conf.PNG?raw=true)
+
+---
+
+# Step 2 – Create Nginx Dockerfile
+
+Inside the nginx folder, create a Dockerfile:
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/nginx%20dockerfile.PNG?raw=true)
+
+---
+
+# Step 3 – Update docker-compose.yml
+
+Add the Nginx service:
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker%20nginx%20compose%20yml%20update.PNG?raw=true)
+
+---
+
+# Step 4 – Build Everything
+
+From the project root
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Nginx%20docker%20compose%20down.PNG?raw=true)
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker%20nginx%20compose%20build.PNG?raw=true)
+
+---
+
+# Step 5 – Verify
+
+docker ps
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/nginx%20docker%20ps.PNG?raw=true)
+
+---
+
+# Step 6 – Test
+
+Open these URLs:
+
+http://localhost/employees
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Nginx%20employee%20service%20ruuning.PNG?raw=true)
+
+http://localhost/departments
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Nginx%20department%20%20service%20running.PNG?raw=true)
+
+http://localhost/payroll
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Nginx%20payroll%20service%20running.PNG?raw=true)
+
+http://localhost/attendance
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Nginx%20attendance%20service%20running.PNG?raw=true)
