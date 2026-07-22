@@ -38,4 +38,30 @@ Even though these services are independent they communicate with each other when
 We use Nginx which acts as a high-performance reverse proxy and web server. It routes requests to backend services and is widely used in production.
 Docker Networking allows containers to communicate securely using service names instead of IP addresses.
 
+---
+
+Project Setup & Creating the Employee Service
+
+Step 1: Create the Project Folder
+
+Open Terminal 
+
+Navigate to the location where we keep our projects.
+
+cd C:\Users\asus
+
+Create the main project folder
+
+mkdir employee-management-system
+
+Go inside it
+
+cd employee-management-system
+
+---
+
+Open VS Code
+
+code .
+
 
