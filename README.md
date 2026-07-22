@@ -303,4 +303,14 @@ http://localhost:3004/attendance
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20running%20browser.PNG?raw=true)
 
+---
 
+# Final Microservices Architecture
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Final%20Microservices%20Architecture.PNG?raw=true)
+
+Currently users access each service directly using its port.
+
+Nginx will expose only one entry point. 
+
+Nginx receives the request and forwards it to the correct service.
