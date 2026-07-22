@@ -314,3 +314,56 @@ Currently users access each service directly using its port.
 Nginx will expose only one entry point. 
 
 Nginx receives the request and forwards it to the correct service.
+
+---
+
+# Dockerizing the Employee Service
+
+# Step 1: Navigate to Employee Service
+
+cd employee-service
+
+---
+
+# Step 2: Create Dockerfile
+
+Create a file: Dockerfile
+
+# Step 3: Paste the Following
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/employee%20service%20dockerfile.PNG?raw=true)
+
+---
+
+# Step 4: Docker Build Process
+
+docker build -t employee-service:v1 .
+
+Verify the Image
+
+docker images
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/employee%20service%20docker%20build.PNG?raw=true)
+
+---
+
+# Step 5: Run the Container
+
+docker run -d -p 3001:3001 --name employee-container employee-service:v1
+
+Verify Running Containers
+
+docker ps
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20container.PNG?raw=true)
+
+---
+
+# Step 6: Test in Browser
+
+http://localhost:3001/employees
+
+The service is now running inside Docker not directly on our machine.
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20dockerize%20browser.PNG?raw=true)
+
