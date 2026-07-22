@@ -138,8 +138,6 @@ Open a new terminal
 
 cd department-service
 
----
-
 # Step 2: Initialize Node Project
 
 npm init -y
