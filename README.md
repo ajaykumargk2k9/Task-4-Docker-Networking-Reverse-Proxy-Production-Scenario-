@@ -245,3 +245,62 @@ http://localhost:3003/payroll
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20running%20browser.PNG?raw=true)
 
+---
+
+# Create the Attendance Service
+
+# Step 1: Navigate to Attendance Service
+
+Open a new terminal
+
+cd attendance-service
+
+# Step 2: Initialize Node.js
+
+npm init -y
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20npm.PNG?raw=true)
+
+---
+
+# Step 3: Install Express
+
+npm install express
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20install%20express.PNG?raw=true)
+
+---
+
+# Step 4: Create app.js
+
+const express = require("express");
+
+const app = express();
+
+const PORT = 3004;
+
+app.get("/attendance", (req, res) => {
+    res.send("Attendance Service Running");
+});
+
+app.listen(PORT, () => {
+    console.log(`Attendance Service running on port ${PORT}`);
+});
+
+---
+
+# Step 5: Run the Service
+
+node app.js
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20running%20cmd.PNG?raw=true)
+
+---
+
+# Step 6: Test
+
+http://localhost:3004/attendance
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20running%20browser.PNG?raw=true)
+
+
