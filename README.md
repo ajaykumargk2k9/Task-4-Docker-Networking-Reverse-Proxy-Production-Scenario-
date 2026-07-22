@@ -72,5 +72,49 @@ code .
 
 # Step 2: Create the Folder Structure
 
+---
+
+# Step 3: Create Employee Service
+
+Go into the folder
+
+cd employee-service
+
+Initialize Node.js
+
+npm init -y
+
+---
+
+# Step 4: Install Express
+
+Run
+
+npm install express
+
+---
+
+# Step 5: Create app.js
+
+Inside employee-service, create app.js
+
+Paste the code 
+
+---
+
+# Step 6: Start the Application
+
+Run: node app.js
+
+We should see: Employee Service running on port 3001
+
+---
+
+# Step 7: Test in Browser
+
+http://localhost:3001/employees
+
+Expected Output: Employee Service Running
+
 
 
