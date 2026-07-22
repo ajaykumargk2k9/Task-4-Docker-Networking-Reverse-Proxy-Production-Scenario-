@@ -458,3 +458,7 @@ Test
 http://localhost:3004/attendance
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20service%20dockerize%20browser.PNG?raw=true)
+
+At this stage users still access each service directly by its port.
+
+Docker Compose and Nginx will simplify this into a single entry point.
