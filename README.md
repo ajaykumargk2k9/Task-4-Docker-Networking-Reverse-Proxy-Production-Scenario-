@@ -58,10 +58,12 @@ Go inside it
 
 cd employee-management-system
 
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20Management%20System.PNG?raw=true)
+
 ---
 
 Open VS Code
 
 code .
 
-
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/VS%20Code%20Employee%20Management%20System.PNG?raw=true)
