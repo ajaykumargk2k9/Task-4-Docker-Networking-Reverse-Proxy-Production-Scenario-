@@ -40,7 +40,7 @@ Docker Networking allows containers to communicate securely using service names 
 
 ---
 
-Project Setup & Creating the Employee Service
+# Project Setup & Creating the Employee Service
 
 # Step 1: Create the Project Folder
 
@@ -130,7 +130,7 @@ Expected Output: Employee Service Running
 
 ---
 
-Create the Department Service
+# Create the Department Service
 
 # Step 1: Go to Department Service
 
@@ -147,6 +147,8 @@ npm init -y
 ---
 
 # Step 3: Install Express
+
+npm install express
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/department%20service%20install%20express.PNG?raw=true)
 
@@ -172,14 +174,74 @@ app.listen(PORT, () => {
 
 # Step 5: Run the Service
 
+node app.js
+
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20running%20cmd.PNG?raw=true)
 
 ---
 
 # Step 6: Test
 
+http://localhost:3002/departments
+
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20running%20browser.PNG?raw=true)
 
 
+---
 
+# Create the Payroll Service
+
+# Step 1: Navigate to Payroll Service
+
+Open a new terminal
+
+cd payroll-service
+
+# Step 2: Initialize Node.js
+
+npm init -y
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20npm.PNG?raw=true)
+
+---
+
+# Step 3: Install Express
+
+npm install express
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20install.PNG?raw=true)
+
+---
+
+# Step 4: Create app.js
+
+const express = require("express");
+
+const app = express();
+
+const PORT = 3003;
+
+app.get("/payroll", (req, res) => {
+    res.send("Payroll Service Running");
+});
+
+app.listen(PORT, () => {
+    console.log(`Payroll Service running on port ${PORT}`);
+});
+
+---
+
+# Step 5: Run the Service
+
+node app.js
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20running%20cmd.PNG?raw=true)
+
+---
+
+# Step 6: Test
+
+http://localhost:3003/payroll
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20running%20browser.PNG?raw=true)
 
