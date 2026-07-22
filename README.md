@@ -42,7 +42,7 @@ Docker Networking allows containers to communicate securely using service names 
 
 Project Setup & Creating the Employee Service
 
-Step 1: Create the Project Folder
+# Step 1: Create the Project Folder
 
 Open Terminal 
 
@@ -67,3 +67,10 @@ Open VS Code
 code .
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/VS%20Code%20Employee%20Management%20System.PNG?raw=true)
+
+---
+
+# Step 2: Create the Folder Structure
+
+
+
