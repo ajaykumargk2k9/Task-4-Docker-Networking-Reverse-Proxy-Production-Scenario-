@@ -462,3 +462,57 @@ http://localhost:3004/attendance
 At this stage users still access each service directly by its port.
 
 Docker Compose and Nginx will simplify this into a single entry point.
+
+---
+
+# Docker Compose & Custom Docker Network
+
+# Step 1: Create docker-compose.yml
+
+Create this file in the project root: 
+
+employee-management-system/docker-compose.yml
+
+# Step 2: Add the Configuration
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker-compose-yaml.PNG?raw=true)
+
+# Step 3: Build Everything
+
+From the project root
+
+docker compose build
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker%20compose%20up.PNG?raw=true)
+
+# Step 4: Start Everything
+
+docker compose up --build -d --force-recreate 
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker%20compose%20up%20build.PNG?raw=true)
+
+# Step 5: Verify Containers
+
+docker compose ps
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/docker%20compose%20ps.PNG?raw=true)
+
+# Step 6: Test All Services
+
+Test these URLs
+
+http://localhost:3001/employees
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20running.PNG?raw=true)
+
+http://localhost:3002/departments
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20running.PNG?raw=true)
+
+http://localhost:3003/payroll
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20running.PNG?raw=true)
+
+http://localhost:3004/attendance
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20running.PNG?raw=true)
