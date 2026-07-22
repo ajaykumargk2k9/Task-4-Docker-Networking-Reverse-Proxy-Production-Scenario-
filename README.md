@@ -367,3 +367,94 @@ The service is now running inside Docker not directly on our machine.
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20dockerize%20browser.PNG?raw=true)
 
+---
+
+# Dockerize the Remaining Microservices
+
+# Step 1: Dockerize Department Service
+
+Navigate to the project:
+
+cd department-service
+
+Create a file: Dockerfile
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20dockerfile.PNG?raw=true)
+
+Build Image
+
+docker build -t department-service:v1 .
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20build.PNG?raw=true)
+
+Run Container
+
+docker run -d -p 3002:3002 --name department-container department-service:v1
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20container.PNG?raw=true)
+
+Test
+
+http://localhost:3002/departments
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20dockerize%20browser.PNG?raw=true)
+
+---
+
+# Step 2: Dockerize Payroll Service
+
+Navigate to the project:
+
+cd payroll-service
+
+Create a file: Dockerfile
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20service%20dockerfile.PNG?raw=true)
+
+Build Image
+
+docker build -t payroll-service:v1 .
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20service%20build.PNG?raw=true)
+
+Run Container
+
+docker run -d -p 3003:3003 --name payroll-container payroll-service:v1
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20service%20container.PNG?raw=true)
+
+Test
+
+http://localhost:3003/payroll
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Payroll%20service%20dockerize%20browser.PNG?raw=true)
+
+---
+
+# Step 3: Dockerize Attendance Service
+
+Navigate to the project:
+
+cd attendance-service
+
+Create a file: Dockerfile
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20service%20dockerfile.PNG?raw=true)
+
+Build Image
+
+docker build -t attendance-service:v1 .
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20service%20build.PNG?raw=true)
+
+Run Container
+
+docker run -d -p 3004:3004 --name attendance-container attendance-service:v1
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20service%20container.PNG?raw=true)
+
+Test
+
+http://localhost:3004/attendance
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Attendance%20service%20dockerize%20browser.PNG?raw=true)
