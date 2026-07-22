@@ -72,6 +72,8 @@ code .
 
 # Step 2: Create the Folder Structure
 
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Project%20Structure.PNG?raw=true)
+
 ---
 
 # Step 3: Create Employee Service
@@ -84,6 +86,8 @@ Initialize Node.js
 
 npm init -y
 
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Create%20Employee%20service.PNG?raw=true)
+
 ---
 
 # Step 4: Install Express
@@ -91,6 +95,8 @@ npm init -y
 Run
 
 npm install express
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/employee%20service%20install%20express.PNG?raw=true)
 
 ---
 
@@ -100,6 +106,8 @@ Inside employee-service, create app.js
 
 Paste the code 
 
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/app.js%20code.PNG?raw=true)
+
 ---
 
 # Step 6: Start the Application
@@ -107,6 +115,8 @@ Paste the code
 Run: node app.js
 
 We should see: Employee Service running on port 3001
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20running%20cmd.PNG?raw=true)
 
 ---
 
@@ -116,5 +126,5 @@ http://localhost:3001/employees
 
 Expected Output: Employee Service Running
 
-
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20running%20browser.PNG?raw=true)
 
