@@ -128,3 +128,60 @@ Expected Output: Employee Service Running
 
 ![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Employee%20service%20running%20browser.PNG?raw=true)
 
+---
+
+Create the Department Service
+
+# Step 1: Go to Department Service
+
+Open a new terminal
+
+cd department-service
+
+---
+
+# Step 2: Initialize Node Project
+
+npm init -y
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20npm.PNG?raw=true)
+
+---
+
+# Step 3: Install Express
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/department%20service%20install%20express.PNG?raw=true)
+
+---
+
+# Step 4: Create app.js
+
+const express = require("express");
+
+const app = express();
+
+const PORT = 3002;
+
+app.get("/departments", (req, res) => {
+    res.send("Department Service Running");
+});
+
+app.listen(PORT, () => {
+    console.log(`Department Service running on port ${PORT}`);
+});
+
+---
+
+# Step 5: Run the Service
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20running%20cmd.PNG?raw=true)
+
+---
+
+# Step 6: Test
+
+![image alt](https://github.com/ajaykumargk2k9/Task-4-Docker-Networking-Reverse-Proxy-Production-Scenario-/blob/main/Images/Department%20service%20running%20browser.PNG?raw=true)
+
+
+
+
